@@ -1,0 +1,38 @@
+void main() {
+  // Explicitly declared variables (lowerCamelCase)
+  String customerName = 'Matel Bosito';
+  int itemCount = 4;
+  double itemPrice = 28.50;
+  bool isLoyaltyMember = true;
+
+  // Arithmetic operations (includes extra credit operators: %, ~/ , ++)
+  double subtotal = itemCount * itemPrice; // Standard multiplication
+  int discountRatePercent = 15;
+  
+  // Extra credit operators (~/ integer division, % remainder)
+  int fullTens = itemCount ~/ 2; // Integer division
+  int remainderItems = itemCount % 2; // Remainder check
+
+  double discountAmount = subtotal * (discountRatePercent / 100);
+  double finalTotal = subtotal - discountAmount;
+
+  // Extra credit operator (++)
+  int bonusPoints = itemCount;
+  bonusPoints++; // Increment operator
+
+  // Comparison operations resulting in bool values
+  bool qualifiesForFreeShipping = finalTotal >= 100.0;
+  bool isBulkPurchase = itemCount > 3;
+
+  // Output using String interpolation ($variable and ${expression})
+  print('--- Store Purchase Summary ---');
+  print('Customer Name: $customerName');
+  print('Items Purchased: $itemCount (Pairs: $fullTens, Remainder: $remainderItems)');
+  print('Unit Price: \$${itemPrice.toStringAsFixed(2)}');
+  print('Subtotal: \$${subtotal.toStringAsFixed(2)}');
+  print('Loyalty Member Discount Applied: $isLoyaltyMember ($discountRatePercent%)');
+  print('Final Total: \$${finalTotal.toStringAsFixed(2)}');
+  print('Earned Bonus Points: $bonusPoints');
+  print('Qualifies for Free Shipping (Total >= \$100): $qualifiesForFreeShipping');
+  print('Is Bulk Purchase (Items > 3): $isBulkPurchase');
+}
